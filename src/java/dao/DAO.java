@@ -73,7 +73,7 @@ public class DAO {
                 + "OFFSET ? ROWS\n"
                 + " FETCH NEXT 3 ROWS ONLY";
         try {
-            conn = new DBContext().getConnection();//mo ket noi voi sql
+            conn = new DBContext().getConnection();
             ps = conn.prepareStatement(query);
             ps.setInt(1, amount);
             rs = ps.executeQuery();
@@ -95,7 +95,7 @@ public class DAO {
         String query = "select * from product\n"
                 + "where cateID = ?";
         try {
-            conn = new DBContext().getConnection();//mo ket noi voi sql
+            conn = new DBContext().getConnection();
             ps = conn.prepareStatement(query);
             ps.setString(1, cid);
             rs = ps.executeQuery();
